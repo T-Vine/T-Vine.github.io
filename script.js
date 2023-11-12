@@ -8,4 +8,4 @@ while (true) {
     word.textContent = words[i];
     i += 1;
     await new Promise(r => setTimeout(r, 2000));
-} 
+}
