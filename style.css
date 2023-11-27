@@ -4,5 +4,6 @@ html {
 #main {
     background-color: "#06084a";
     width: 70%;
+    overflow:hidden;
     height: 100%;
 }
