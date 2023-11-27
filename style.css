@@ -1,4 +1,8 @@
 html {
-    background-color: #000;
     color: #fff;
+}
+#main {
+    background-color: "#06084a";
+    width: 70%;
+    height: 100%;
 }
