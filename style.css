@@ -213,6 +213,7 @@ nav .nav4 {
     animation-delay: 6s;
     animation-duration: 10s;
 }
+/* Card */
 .card {
     border-radius: 15px;
     width: 500px;
@@ -221,6 +222,17 @@ nav .nav4 {
     position: absolute;
     z-index: 2;
 }
+.card h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+.card .desc {
+    font-size: 1.2rem;
+    white-space: normal;
+    text-align: center;
+    padding-left: 3px;
+    padding-right: 3px;
+} 
 @keyframes animate {
 
     0%{
