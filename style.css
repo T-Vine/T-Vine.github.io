@@ -37,8 +37,20 @@ nav .nav1, .nav2, .nav3, .nav4 {
     align-items: center;
     justify-content: center;
     flex: 1;
-    color: #000;
+    color: #fff;
+    font-size: 2em;
 }
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: transform 2s ease;
+
+}
+a:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+/*
 nav .nav1 {
     background-color: rgb(59, 21, 121);
 }
@@ -51,12 +63,13 @@ nav .nav3 {
 nav .nav4 {
     background-color: #ff6103;
 }
+*/
 /* Animated Background */
 .squares{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 70%;
     height: 100%;
     overflow: hidden;
 }
@@ -137,7 +150,7 @@ nav .nav4 {
     animation-delay: 7s;
 }
 .squares li:nth-child(8){
-    left: 50%;
+    left: 70%;
     width: 25px;
     height: 25px;
     animation-delay: 15s;
@@ -211,6 +224,34 @@ nav .nav4 {
     width: 40px;
     height: 50px;
     animation-delay: 6s;
+    animation-duration: 10s;
+}
+.squares li:nth-child(18){
+    left: 90%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 11s;
+}
+.squares li:nth-child(19){
+    left: 950%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 10s;
+}
+.squares li:nth-child(20){
+    left: 74%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+.squares li:nth-child(21){
+    left: 89%;
+    width: 4px;
+    height: 150px;
+    animation-delay: 3s;
     animation-duration: 10s;
 }
 /* Card */
