@@ -23,6 +23,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 0.5em;
 }
 a {
     display: flex;
@@ -49,14 +50,14 @@ a:hover {
 .info {
     font-size: 1.29em;
     margin: 0.2em;
-    margin-bottom: 0.1em;
+    margin-bottom: 0.2em;
     margin-top: 0.6em;
     text-align: center;
 }
 .image {
     width: 70%;
-    height: 20%;
-    max-height: 10rem;
+    height: 25%;
+    max-height: 15rem;
     margin-top: -5px;
 }
 .icon a {

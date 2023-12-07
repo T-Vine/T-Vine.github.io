@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="keywords" conent="coding, programming, maths, blog, mathematics, sine, tangent, cosine, how">
+		<title>Building a Python Maths Library: from Scratch</title>
+		<meta name="description" content="How do Math libraries actually work? How does a calculator do trigonometry? I explore this, via Python, in order to discover.">
+		<link rel="stylesheet" href="blog-page.css">
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+        <article class="article">
+            <a href="../index.html"><p class="icon">Home φ</p></a>
+            <h2 class="title">Building a Python Maths Library: from Scratch</h2>
+            <img class="image" src="/images/dan-cristian-padure-h3kuhYUCE9A-unsplash.jpg" alt="Crosword-style text stating 'The Beginning'">
+            <p class="info"> How do Math libraries actually work? How does a calculator do trigonometry? How are square roots, actually done?
+                Mathematics is a major part of our world, and yet behind the most common functions people think of, there is a detailed process.   
+                Over the course of this blog, I'm going to be detailing how certain things are calculated in Maths, along with my journey discovering them, and hopefully help you to understand the (more) Maths, behind the Maths!
+                <br>
+                <br>
+                To begin, I wanted to explore perhaps one of the most famous Mathematical functions: Sine. When you input, for example, 30 into a calculator's sine function,
+                (under Degrees), you get back 0.5 with barely any trouble: indeed, checking out the graph it's easy to say which values correspond to which. 
+                <br>
+                But, behind the scenes, an intricate calculation is going on - which I had no idea about. To begin my research, I decided to look at common algorithms for sine. 
+                Two sprung up, being the CORDIC algorithm, and the Taylor series. The former, I could find very little information about, so I settled for the Taylor series. Incidentally,
+                this appears not to provide as much power as CORDIC, but given enough processing power was exceedingly satisfactory for my needs. The Taylor Series, for trigonometry, actually
+                is called the Madhava series (named after that Mathematican). It is used to calculate sine, cosine and the arctangent by seperate means. 
+                <br>
+                The Madhava series takes a sine input in radians. It then runs it through the series and totals it, all the way to infinity: of course, Python is unable to do this,
+                especially because of the integer limit which is quickly reached. Depending on the input though, I often reach several a few decimal points in accuracy, which is brilliant.
+                I have pondered about remaking this code in Rust, in order to make use of the unsigned integers it has: but that's for another day.
+                <br>
+                To summate my calculations, I simply created a list, and appended to it each new value, thereby returning the sum with Pythons built-in 'sum()' function: not that it would have been hard without.
+                The function used for sine was:
+                <math>
+                    <mrow>
+                        <munderover>
+                          <mo>∑</mo>
+                          <mrow>
+                            <mi>n</mi>
+                            <mo>=</mo>
+                            <mn>0</mn>
+                          </mrow>
+                          <mrow>
+                            <mo>+</mo>
+                            <mn>∞</mn>
+                          </mrow>
+                        </munderover>
+                        <mfrac>
+                        <msup>
+                          <mn>(-1)</mn>
+                          <mn>k</mn>
+                        </msup>
+                        <mi>(2k+1)!</mi>
+                        
+                        </mfrac>
+                        <msup><mn>θ</mn><mn>2k+1</mn> </msup>
+                        
+                      </mrow>
+                </math>
+            </p>
+            <p class="date credit">6/12/2023<br>Photo by <a href="https://unsplash.com/@dancristianpaduret?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Dan Cristian Pădureț</a> on <a href="https://unsplash.com/photos/a-blackboard-with-a-bunch-of-diagrams-on-it-h3kuhYUCE9A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+            </p>
+            <!-- Photo by <a href="https://unsplash.com/@brett_jordan?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Brett Jordan</a> on Unsplash</a>-->
+            
+        </article>
+    </body>
+</html>
