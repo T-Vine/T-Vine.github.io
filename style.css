@@ -258,7 +258,7 @@ nav .nav4 {
 .card {
     border-radius: 15px;
     width: 500px;
-    height: 300px;
+    height: auto;
     background-color: rgb(107 114 128);
     position: absolute;
     z-index: 2;
@@ -296,5 +296,25 @@ nav .nav4 {
     100%{
         transform: translateX(70vw);
         opacity: 0;
+    }
+}
+@media (max-width: 480px) {
+    .squares li:nth-child(20){
+        display: none;
+    }
+    .squares li:nth-child(16){
+        display: none;
+    }
+    .flex-nav {
+        display: none;
+    }
+    #main {
+        width: 100%;
+    }
+    .card {
+        width: 65%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
     }
 }
